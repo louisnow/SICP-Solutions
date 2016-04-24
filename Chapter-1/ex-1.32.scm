@@ -20,7 +20,6 @@
             (lambda (x) x)
             (lambda (x) (+ x 1)))
 ;iterative
-;recursive
 (define (accumulate-iter combiner null-value a b term next)
   (define (iter result a) 
     (if (> a b)
