@@ -1,4 +1,5 @@
 #lang sicp
+(#%require "../common/common.scm")
 ;ex 1.29
 (define (sum term a next b)
   (if (> a b)
@@ -33,6 +34,6 @@
 
 ;integral of the function x cube between the interval 0 to 1 with dx set as 0.001
 ;0.24999999998662864
-(integral (lambda (x) (* x x x)) 0 1 0.00001)
+(integral cube 0 1 0.00001)
 ;1/4
-(sim-integral (lambda (x) (* x x x)) 0 1 1000)
+(sim-integral cube 0 1 1000)

@@ -3,8 +3,8 @@
 ;pi/4 = 0.78539816339 source: calculator
 (define (term a)
   (if (even? a)
-      (/ a (+ a 1))
-      (/ (+ a 1) a)))
+      (/ a (inc a))
+      (/ (inc a) a)))
 (define (next a)
   (+ a 1))
  

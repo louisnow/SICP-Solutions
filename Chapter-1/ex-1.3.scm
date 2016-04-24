@@ -1,7 +1,6 @@
 #lang sicp
-;ex 1.3
 (#%require "../common/common.scm")
-;(define (sq x) (* x x))
+;ex 1.3
 (define (larger? a b)
   (if (> a b)
       a

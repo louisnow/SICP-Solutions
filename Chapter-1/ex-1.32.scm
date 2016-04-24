@@ -11,14 +11,14 @@
             1
             5
             (lambda (x) x)
-            (lambda (x) (+ x 1)))
+            inc)
 ;product
 (accumulate *
             1
             1
             5
             (lambda (x) x)
-            (lambda (x) (+ x 1)))
+            inc)
 ;iterative
 (define (accumulate-iter combiner null-value a b term next)
   (define (iter result a) 
@@ -32,11 +32,11 @@
             1
             5
             (lambda (x) x)
-            (lambda (x) (+ x 1)))
+            inc)
 ;product
 (accumulate-iter *
             1
             1
             5
             (lambda (x) x)
-            (lambda (x) (+ x 1)))
+            inc)

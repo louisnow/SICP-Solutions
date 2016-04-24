@@ -7,4 +7,4 @@
         (iter (next a) (+ result (term a)))))
   (iter a 0))
 ;iterative sum function,1+2+3 = 6
-(sum (lambda (x) x) 1 (lambda (x)(+ x 1)) 3)
+(sum (lambda (x) x) 1 inc 3)
