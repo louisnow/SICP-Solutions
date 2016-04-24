@@ -1,4 +1,4 @@
-#lang racket
+#lang sicp
 ;ex 1.30
 (define (sum term a next b)
   (define (iter a result)
