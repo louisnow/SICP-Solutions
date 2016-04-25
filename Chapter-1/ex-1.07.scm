@@ -15,6 +15,7 @@
 ;   (sqrt 999999999999999999) = 1000000000.0
 
 ; to try to fix this issue we must improve 'good-enough?'
+; stop progress when the improvement in successive runs of 'sqrt1' is minimal or gains have diminished.
 (define (good-enough? guess prev-guess)
       (< (abs (- guess prev-guess)) 0.001)) 
 (define (sqrt1 x) 
