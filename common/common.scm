@@ -11,15 +11,15 @@
 
 ;Square root
 (define (sqrt x) 
-  (define (sqrt-iter guess)  
+  (define (sqrt-iter guess prev-guess)  
     (define (improve guess)
       (average guess (/ x guess)))
-    (define (good-enough? guess)
-      (< (abs (- (sq guess) x)) 0.001))    
-    (if (good-enough? guess)
+    (define (good-enough? guess prev-guess)
+      (< (abs (- guess prev-guess)) 0.0001))
+    (if (good-enough? guess prev-guess)
         guess
-        (sqrt-iter (improve guess))))
-  (sqrt-iter 1.0))
+        (sqrt-iter (improve guess) guess)))
+  (sqrt-iter 1.0 0))
 
 ;Cube root
 (define (cube-root x) 
