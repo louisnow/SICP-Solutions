@@ -1,0 +1,11 @@
+Section 1.2.2 Tree Recursion
+Counting Change
+Tree for the footnote 33 using nickels and dimes for amount 10
+1,2 represent the coins penies(value 1) and nickels(value 5) respectively.
+Refer to the text for the exact rules
+                               1,2->10
+        1->10                                          1,2 -> 5
+0->10          1 -> 9                        1 -> 5               1,2 -> 0 
+  0             ...                           ...                     1
+          0 -> 1      0->0                     1
+            0           1
