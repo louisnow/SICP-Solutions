@@ -33,4 +33,25 @@
         (cube-root-iter (improve guess) guess)))
   (cube-root-iter 1.0 0))
 
+;GCD
+(define (gcd a b)
+(if (= b 0)
+a
+(gcd b (remainder a b))))
+
+;Prime?
+(define (prime? n)
+  (define (smallest-divisor n)
+    (find-divisor n 2))
+  (define (find-divisor n test-divisor)
+    (cond ((> (sq test-divisor) n) n)
+          ((divides? test-divisor n) test-divisor)
+          (else (find-divisor n (+ test-divisor 1)))))
+  (define (divides? a b)
+    (= (remainder b a) 0))
+  (if (> n 1)
+      (= n (smallest-divisor n))
+      false))
+
+
 (provide (all-defined-out))
